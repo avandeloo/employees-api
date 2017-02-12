@@ -1,4 +1,4 @@
-class EmployeesController < ApplicationController
+class Api::V1::EmployeesController < ApplicationController
 
   def index
     @employees = Employee.all  
@@ -17,8 +17,8 @@ class EmployeesController < ApplicationController
   end
 
   def update
-    @player = Player.find(params[:id])
-    @player.update(
+    @employee = Employee.find(params[:id])
+    @employee.update(
                     first_name: params[:first_name],
                     last_name: params[:last_name],
                     birthdate: params[:birthdate],
